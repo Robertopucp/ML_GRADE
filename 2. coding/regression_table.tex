@@ -2,34 +2,35 @@
 \caption{Potato Market modelling (Linear regression)}
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{@{\extracolsep{2pt}}l*{4}{c}@{}}
+\begin{tabular}{@{\extracolsep{2pt}}l*{5}{c}@{}}
 \hline\hline
 & \multicolumn{5}{c}{Dependent Variable: Potato price (log)} \\
 \cline{2-6}
- & Model 1 & Model 2 & Model 3 & Model 4 \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 \\
 \hline
-Potato production (log) & -0.000 & 0.003\sym{***} & -0.001 & -0.003\sym{***} \\
- & (0.000) & (0.001) & (0.001) & (0.001) \\
-Dummy April &  & -0.057\sym{***} & -0.022\sym{***} & -0.024\sym{***} \\
- &  & (0.009) & (0.002) & (0.004) \\
-Dummy May &  & -0.070\sym{***} & -0.029\sym{***} & -0.029\sym{***} \\
- &  & (0.014) & (0.003) & (0.003) \\
-Dummy June &  & -0.042\sym{***} & -0.002\sym{**} & -0.002 \\
- &  & (0.015) & (0.001) & (0.004) \\
-Month fixed effects & no & yes & yes & yes \\
-Year fixed effects & no & no & yes & yes \\
-Province fixed effects & no & no & no & yes \\
+Potato production (log) & -0.000 & 0.003\sym{***} & -0.001 & -0.003\sym{***} & -0.005\sym{*} \\
+ & (0.000) & (0.001) & (0.001) & (0.001) & (0.003) \\
+Dummy April &  & -0.057\sym{***} & -0.022\sym{***} & -0.024\sym{***} & -0.028\sym{***} \\
+ &  & (0.009) & (0.002) & (0.004) & (0.008) \\
+Dummy May &  & -0.070\sym{***} & -0.029\sym{***} & -0.029\sym{***} & -0.032\sym{***} \\
+ &  & (0.014) & (0.003) & (0.003) & (0.006) \\
+Dummy June &  & -0.042\sym{***} & -0.002\sym{**} & -0.002 & -0.002 \\
+ &  & (0.015) & (0.001) & (0.004) & (0.008) \\
+Month fixed effects & No & Yes & Yes & Yes & Yes \\
+Year fixed effects & No & No & Yes & Yes & No \\
+Province fixed effects & No & No & No & Yes & Yes \\
+Time trend & No & No & No & No & Yes \\
 
 \hline
-Observarions & 2911 & 2911 & 2911 & 2911 \\
-R\sym{2} & 0.000 & 0.027 & 0.647 & 0.650 \\
+Observarions & 2911 & 2911 & 2911 & 2911 & 2911 \\
+R\sym{2} & 0.000 & 0.027 & 0.647 & 0.650 & 0.304 \\
 \hline\hline
-\multicolumn{5}{l}{\footnotesize Note.—Huber robust standard errors are in parentheses.}\vspace{-.25em} \\
-\multicolumn{5}{l}{\footnotesize Regression disturbance terms are clustered at the District level.}\vspace{-.25em} \\
-\multicolumn{5}{l}{\footnotesize Rest of dummies by month, year and province fixed effects not reported}\vspace{-.25em} \\
-\multicolumn{5}{l}{\footnotesize * Significantly different from zero at 90 percent confidence.}\vspace{-.25em} \\
-\multicolumn{5}{l}{\footnotesize ** Significantly different from zero at 95 percent confidence.}\vspace{-.25em} \\
-\multicolumn{5}{l}{\footnotesize *** Significantly different from zero at 99 percent confidence.}
+\multicolumn{6}{l}{\footnotesize Note.—Huber robust standard errors are in parentheses.}\vspace{-.25em} \\
+\multicolumn{6}{l}{\footnotesize Regression disturbance terms are clustered at the Region level.}\vspace{-.25em} \\
+\multicolumn{6}{l}{\footnotesize Rest of dummies by month, year and province fixed effects not reported}\vspace{-.25em} \\
+\multicolumn{6}{l}{\footnotesize * Significantly different from zero at 90 percent confidence.}\vspace{-.25em} \\
+\multicolumn{6}{l}{\footnotesize ** Significantly different from zero at 95 percent confidence.}\vspace{-.25em} \\
+\multicolumn{6}{l}{\footnotesize *** Significantly different from zero at 99 percent confidence.}
 \end{tabular}
 }
 \end{table}
